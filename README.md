@@ -1,3 +1,30 @@
-# winston-logstash  
+<a name="module_LogstashTransport"></a>
 
-This module adds a Logstash transport to Winston to simplify logging to ELK. This plugin supports multiple inputs for Logstash thus enabling the user to make the choice that best suits his/her needs.
+## LogstashTransport
+
+* [LogstashTransport](#module_LogstashTransport)
+    * [module.exports](#exp_module_LogstashTransport--module.exports) ⏏
+        * [new module.exports(options)](#new_module_LogstashTransport--module.exports_new)
+        * [~LogstashTransport](#module_LogstashTransport--module.exports..LogstashTransport) ⇐ <code>Transport</code>
+
+<a name="exp_module_LogstashTransport--module.exports"></a>
+
+### module.exports ⏏
+**Kind**: Exported class  
+<a name="new_module_LogstashTransport--module.exports_new"></a>
+
+#### new module.exports(options)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | The Configuration object |
+| options.name | <code>String</code> | The name of the transport |
+| options.input | <code>String</code> | The input that you want to use |
+| options.host | <code>String</code> | The Logstash server host |
+| options.port | <code>String</code> | The port of the Logstash pipeline you've configured |
+
+<a name="module_LogstashTransport--module.exports..LogstashTransport"></a>
+
+#### module.exports~LogstashTransport ⇐ <code>Transport</code>
+**Kind**: inner class of [<code>module.exports</code>](#exp_module_LogstashTransport--module.exports)  
+**Extends**: <code>Transport</code>  

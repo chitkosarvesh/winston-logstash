@@ -11,13 +11,18 @@ module.exports =
 class LogstashTransport extends Transport  {
     /**
      * 
-     * @param {*} options 
+     * @param {Object} options - The Configuration object
+     * @param {String} options.name - The name of the transport
+     * @param {String} options.input - The input that you want to use
+     * @param {String} options.host - The Logstash server host
+     * @param {String} options.port - The port of the Logstash pipeline you've configured
      */
     constructor(options){
         super(options);
         this.name='LogstashTransport'
         this.input=options.input
-
+        this.host = options.host
+        this.port = options.port
     }
     log(info,callback)  {
         setImmediate(()=>{
