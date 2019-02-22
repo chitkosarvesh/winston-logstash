@@ -2,13 +2,13 @@
  * @module LogstashTransport
  */
 const winston = require("winston")
-const Transport = winston.transport;
+
 /**
  * @class LogstashTransport
  * @extends Transport
  */
 module.exports = 
-class LogstashTransport extends Transport  {
+class LogstashTransport extends winston.Transport  {
     /**
      * 
      * @param {Object} options - The Configuration object
