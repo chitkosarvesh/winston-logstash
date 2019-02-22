@@ -1,0 +1,30 @@
+{
+  "name": "winston-logstash",
+  "version": "0.0.1",
+  "description": "Adds Logstash support to Winston 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chitkosarvesh/winston-logstash.git"
+  },
+  "keywords": [
+    "winston",
+    "logstash",
+    "winston3",
+    "logging",
+    "transport",
+    "winston-transport"
+  ],
+  "author": "Sarvesh Chitko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chitkosarvesh/winston-logstash/issues"
+  },
+  "homepage": "https://github.com/chitkosarvesh/winston-logstash#readme",
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}
