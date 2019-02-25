@@ -28,6 +28,15 @@ class LogstashTransport extends winston.Transport  {
             if(this.input=="udp"){
                 this.input = new UDPInput(options);
             }
+            else if(this.input=="tcp"){
+                this.input = new TCPInput(options);
+            }
+            else if(this.input=="websocket"){
+                this.input = new WebSocketInput(options);
+            }
+            else if(this.input=="http"){
+                this.input = new HTTPInput(options);
+            }
         }
         else{
             throw new Error("Error creating the Logstash Object, one or more parameter missing.");
@@ -36,7 +45,7 @@ class LogstashTransport extends winston.Transport  {
     /**
      * @function log
      * @param {Object} info - The log object that needs to be sent to Logstash
-     * @param {function} callback - Callback function to call, once processing the log message is processed
+     * @param {Function} callback - Callback function to call, once processing the log message is processed
      */
     log(info,callback)  {
         setImmediate(()=>{
