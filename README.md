@@ -1,16 +1,28 @@
 ## Modules
 
 <dl>
+<dt><a href="#LogstashTransport..module_UDPInput">UDPInput</a></dt>
+<dd></dd>
 <dt><a href="#module_LogstashTransport">LogstashTransport</a></dt>
 <dd></dd>
 </dl>
 
-## Classes
+<a name="LogstashTransport..module_UDPInput"></a>
 
-<dl>
-<dt><a href="#UDPInput">UDPInput</a></dt>
-<dd></dd>
-</dl>
+## UDPInput
+
+* [UDPInput](#LogstashTransport..module_UDPInput)
+    * [~UDPInput](#LogstashTransport..module_UDPInput..UDPInput)
+        * [new UDPInput()](#new_LogstashTransport..module_UDPInput..UDPInput_new)
+
+<a name="LogstashTransport..module_UDPInput..UDPInput"></a>
+
+### UDPInput~UDPInput
+**Kind**: inner class of [<code>UDPInput</code>](#LogstashTransport..module_UDPInput)  
+<a name="new_LogstashTransport..module_UDPInput..UDPInput_new"></a>
+
+#### new UDPInput()
+The class that does transmission of logs using the UDP input
 
 <a name="module_LogstashTransport"></a>
 
@@ -58,13 +70,4 @@ The main class that adds the Logstash capabilities to Winston
 | --- | --- | --- |
 | info | <code>Object</code> | The log object that needs to be sent to Logstash |
 | callback | <code>function</code> | Callback function to call, once processing the log message is processed |
-
-<a name="UDPInput"></a>
-
-## UDPInput
-**Kind**: global class  
-<a name="new_UDPInput_new"></a>
-
-### new UDPInput()
-The class that does transmission of logs using the UDP input
 
