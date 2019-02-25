@@ -126,6 +126,7 @@ The class that does transmission of logs using the WebSockets
 <a name="module_LogstashTransport"></a>
 
 ## LogstashTransport
+**Author**: Sarvesh Chitko (chitkosarvesh@gmail.com)  
 
 * [LogstashTransport](#module_LogstashTransport)
     * [module.exports](#exp_module_LogstashTransport--module.exports) ⏏

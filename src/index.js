@@ -1,5 +1,6 @@
 /**
  * @module LogstashTransport
+ * @author Sarvesh Chitko (chitkosarvesh@gmail.com)
  */
 const winston = require("winston")
 const UDPInput = require("./UDPInput");
