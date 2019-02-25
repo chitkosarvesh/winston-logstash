@@ -2,10 +2,11 @@
  * @module LogstashTransport
  */
 const winston = require("winston")
-
+const UDPInput = require("./UDPInput");
 /**
  * @class LogstashTransport
  * @extends Transport
+ * @desc The main class that adds the Logstash capabilities to Winston
  */
 module.exports = 
 class LogstashTransport extends winston.Transport  {
@@ -24,7 +25,9 @@ class LogstashTransport extends winston.Transport  {
         this.host = options.host
         this.port = options.port
         if(this.input && this.host && this.port){
-
+            if(this.input=="udp"){
+                this.input = new UDPInput(options);
+            }
         }
         else{
             throw new Error("Error creating the Logstash Object, one or more parameter missing.");
@@ -32,11 +35,12 @@ class LogstashTransport extends winston.Transport  {
     }
     /**
      * @function log
-     * @param {*} info - The log object that needs to be sent to Logstash
-     * @param {*} callback - Callback function to call, once processing the log message is processed
+     * @param {Object} info - The log object that needs to be sent to Logstash
+     * @param {function} callback - Callback function to call, once processing the log message is processed
      */
     log(info,callback)  {
         setImmediate(()=>{
+            this.input.send(info);
             this.emit('logged',info)
         })
         callback()

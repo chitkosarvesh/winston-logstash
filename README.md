@@ -1,3 +1,17 @@
+## Modules
+
+<dl>
+<dt><a href="#module_LogstashTransport">LogstashTransport</a></dt>
+<dd></dd>
+</dl>
+
+## Classes
+
+<dl>
+<dt><a href="#UDPInput">UDPInput</a></dt>
+<dd></dd>
+</dl>
+
 <a name="module_LogstashTransport"></a>
 
 ## LogstashTransport
@@ -6,6 +20,7 @@
     * [module.exports](#exp_module_LogstashTransport--module.exports) ⏏
         * [new module.exports(options)](#new_module_LogstashTransport--module.exports_new)
         * [~LogstashTransport](#module_LogstashTransport--module.exports..LogstashTransport) ⇐ <code>Transport</code>
+            * [new LogstashTransport()](#new_module_LogstashTransport--module.exports..LogstashTransport_new)
         * [~log(info, callback)](#module_LogstashTransport--module.exports..log)
 
 <a name="exp_module_LogstashTransport--module.exports"></a>
@@ -29,6 +44,11 @@
 #### module.exports~LogstashTransport ⇐ <code>Transport</code>
 **Kind**: inner class of [<code>module.exports</code>](#exp_module_LogstashTransport--module.exports)  
 **Extends**: <code>Transport</code>  
+<a name="new_module_LogstashTransport--module.exports..LogstashTransport_new"></a>
+
+##### new LogstashTransport()
+The main class that adds the Logstash capabilities to Winston
+
 <a name="module_LogstashTransport--module.exports..log"></a>
 
 #### module.exports~log(info, callback)
@@ -36,6 +56,15 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| info | <code>\*</code> | The log object that needs to be sent to Logstash |
-| callback | <code>\*</code> | Callback function to call, once processing the log message is processed |
+| info | <code>Object</code> | The log object that needs to be sent to Logstash |
+| callback | <code>function</code> | Callback function to call, once processing the log message is processed |
+
+<a name="UDPInput"></a>
+
+## UDPInput
+**Kind**: global class  
+<a name="new_UDPInput_new"></a>
+
+### new UDPInput()
+The class that does transmission of logs using the UDP input
 

@@ -5,10 +5,10 @@ const logger = winston.createLogger({
     transports:[
         new LogstashTransport({
             host:"172.28.230.203",
-            port:28777,
+            port:28792,
             input:"udp"
         }),
         new winston.transports.Console()
     ]
 });
-logger.log({level:"info",message:"Hello, World!"});
+logger.info("Hello, world!");
