@@ -75,6 +75,10 @@ The class that does transmission of logs using the HTTP Requests
 ##### new TCPInput()
 The class that does transmission of logs using the TCP input
 
+**Example**  
+```js
+node examples/basic-tcp.js
+```
 <a name="LogstashTransport..module_UDPInput"></a>
 
 ## UDPInput
@@ -106,6 +110,10 @@ The class that does transmission of logs using the TCP input
 ##### new UDPInput()
 The class that does transmission of logs using the UDP input
 
+**Example**  
+```js
+node examples/basic-udp.js
+```
 <a name="LogstashTransport..module_WebSocketInput"></a>
 
 ## WebSocketInput

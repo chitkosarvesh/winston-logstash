@@ -6,6 +6,7 @@ module.exports=
 /**
  * @class TCPInput
  * @desc The class that does transmission of logs using the TCP input
+ * @example node examples/basic-tcp.js
  */
 class TCPInput  {
     /**

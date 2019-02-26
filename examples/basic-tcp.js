@@ -6,7 +6,7 @@ const logger = winston.createLogger({
         new LogstashTransport({
             host:"172.28.230.203",
             port:28772,
-            input:"udp"
+            input:"tcp"
         }),
         new winston.transports.Console()
     ]

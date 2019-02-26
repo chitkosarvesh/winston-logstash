@@ -8,6 +8,7 @@ module.exports=
 /**
  * @class UDPInput
  * @desc The class that does transmission of logs using the UDP input
+ * @example node examples/basic-udp.js
  */
 class UDPInput  {
     /**
