@@ -169,6 +169,11 @@ The class that does transmission of logs using the WebSockets
 ##### new LogstashTransport()
 The main class that adds the Logstash capabilities to Winston
 
+**Throws**:
+
+- UnsupportedInputError
+- InvalidParametersError
+
 <a name="module_LogstashTransport--module.exports..log"></a>
 
 #### module.exports~log(info, callback)

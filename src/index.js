@@ -7,15 +7,17 @@ const UDPInput = require("./UDPInput.class-min")
 const TCPInput = require("./TCPInput.class-min")
 const WebSocketInput = require("./WebSocketInput.class-min")
 const HTTPInput = require("./HTTPInput.class-min")
+
+module.exports = 
 /**
  * @class LogstashTransport
  * @extends Transport
  * @desc The main class that adds the Logstash capabilities to Winston
+ * @throws UnsupportedInputError
+ * @throws InvalidParametersError
  */
-module.exports = 
 class LogstashTransport extends winston.Transport  {
     /**
-     * 
      * @param {Object} options - The Configuration object
      * @param {String} options.name - The name of the transport
      * @param {String} options.input - The input that you want to use
