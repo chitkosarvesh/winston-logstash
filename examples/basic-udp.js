@@ -1,14 +1,14 @@
-const winston = require("winston");
-const LogstashTransport = require("../src/index");
+const winston = require("winston")
+const LogstashTransport = require("../src/index")
 const logger = winston.createLogger({
     level:"info",
     transports:[
         new LogstashTransport({
             host:"172.28.230.203",
-            port:28792,
-            input:"udp"
+            port:28772,
+            input:"tcp"
         }),
         new winston.transports.Console()
     ]
 });
-logger.info("Hello, world!");
+logger.info("Hello, world!")

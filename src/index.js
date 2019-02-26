@@ -3,7 +3,10 @@
  * @author Sarvesh Chitko (chitkosarvesh@gmail.com)
  */
 const winston = require("winston")
-const UDPInput = require("./UDPInput");
+const UDPInput = require("./UDPInput")
+const TCPInput = require("./TCPInput")
+const WebSocketInput = require("./WebSocketInput")
+const HTTPInput = require("./HTTPInput")
 /**
  * @class LogstashTransport
  * @extends Transport
@@ -20,27 +23,30 @@ class LogstashTransport extends winston.Transport  {
      * @param {String} options.port - The port of the Logstash pipeline you've configured
      */
     constructor(options){
-        super(options);
+        super(options)
         this.name='LogstashTransport'
         this.input=options.input
         this.host = options.host
         this.port = options.port
         if(this.input && this.host && this.port){
             if(this.input=="udp"){
-                this.input = new UDPInput(options);
+                this.input = new UDPInput(options)
             }
             else if(this.input=="tcp"){
-                this.input = new TCPInput(options);
+                this.input = new TCPInput(options)
             }
             else if(this.input=="websocket"){
-                this.input = new WebSocketInput(options);
+                this.input = new WebSocketInput(options)
             }
             else if(this.input=="http"){
-                this.input = new HTTPInput(options);
+                this.input = new HTTPInput(options)
+            }
+            else {
+                throw new Error("Unspupported Input \""+this.input+"\". It should be either udp, tcp, websocket or http");
             }
         }
         else{
-            throw new Error("Error creating the Logstash Object, one or more parameter missing.");
+            throw new Error("Error creating the Logstash Object, one or more parameter missing.")
         }
     }
     /**
@@ -50,7 +56,7 @@ class LogstashTransport extends winston.Transport  {
      */
     log(info,callback)  {
         setImmediate(()=>{
-            this.input.send(info);
+            this.input.send(info)
             this.emit('logged',info)
         })
         callback()

@@ -1,6 +1,7 @@
 /**
  * @module LogstashTransport~TCPInput
  */
+const net = require("net")
 module.exports=
 /**
  * @class TCPInput
@@ -13,11 +14,14 @@ class TCPInput  {
      */
     constructor(options){
         this.options=options
+        this.connect()
     }
-    connect(){
-
+    connect()   {
+        this.client = net.createConnection({port:this.options.port,host:this.options.host},()=>{
+            this.client.unref()  
+        })
     }
-    send(){
-
+    send(message,callback)  {
+        this.client.write(JSON.stringify(message))
     }
 }
