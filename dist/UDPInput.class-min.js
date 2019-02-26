@@ -1,0 +1,1 @@
+const dgram=require("dgram"),os=require("os");module.exports=class{constructor(t){this.options=t,this.connect()}connect(){this.client=dgram.createSocket("udp4"),this.client.unref()}send(t,e){let o=Buffer.from(t.toString());this.client.send(o,0,o.length,this.options.port,this.options.host,e)}};

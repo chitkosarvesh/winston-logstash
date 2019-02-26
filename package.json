@@ -1,8 +1,8 @@
 {
   "name": "@chitkosarvesh/winston-logstash",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds Logstash support to Winston 3",
-  "main": "src/index.js",
+  "main": "dist/index-min.js",
   "scripts": {
     "test": "mocha tests/index.test.js"
   },
@@ -33,5 +33,11 @@
     "example": "examples",
     "test": "tests"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.1"
+  }
 }

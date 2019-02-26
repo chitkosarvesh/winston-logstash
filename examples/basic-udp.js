@@ -1,5 +1,5 @@
 const winston = require("winston")
-const LogstashTransport = require("../src/index")
+const LogstashTransport = require("../dist/index-min")
 const logger = winston.createLogger({
     level:"info",
     transports:[

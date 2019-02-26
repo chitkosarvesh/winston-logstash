@@ -1,0 +1,1 @@
+const net=require("net");module.exports=class{constructor(t){this.options=t,this.connect()}connect(){this.client=net.createConnection({port:this.options.port,host:this.options.host},()=>{this.client.unref()})}send(t,n){this.client.write(JSON.stringify(t))}};

@@ -3,10 +3,10 @@
  * @author Sarvesh Chitko (chitkosarvesh@gmail.com)
  */
 const winston = require("winston")
-const UDPInput = require("./UDPInput.class-min")
-const TCPInput = require("./TCPInput.class-min")
-const WebSocketInput = require("./WebSocketInput.class-min")
-const HTTPInput = require("./HTTPInput.class-min")
+const UDPInput = require("./UDPInput.class")
+const TCPInput = require("./TCPInput.class")
+const WebSocketInput = require("./WebSocketInput.class")
+const HTTPInput = require("./HTTPInput.class")
 /**
  * @class LogstashTransport
  * @extends Transport

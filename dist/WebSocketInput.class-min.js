@@ -1,0 +1,1 @@
+this.exports=class{constructor(s){this.options=s}};

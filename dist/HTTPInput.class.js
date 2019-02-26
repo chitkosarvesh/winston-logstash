@@ -8,7 +8,6 @@ module.exports=
  */
 class HTTPInput {
     /**
-     * 
      * @param {Object} options - The options object returned from the LogstashTransport class
      */
     constructor(options){
