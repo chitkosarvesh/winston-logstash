@@ -1,6 +1,6 @@
 {
   "name": "@chitkosarvesh/winston-logstash",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds Logstash support to Winston 3",
   "main": "src/index.js",
   "scripts": {
